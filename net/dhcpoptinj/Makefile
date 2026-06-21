@@ -9,13 +9,13 @@ PKG_NAME:=dhcpoptinj
 PKG_RELEASE:=3
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/nanosonde/dhcpoptinj
-PKG_SOURCE_DATE:=2025-04-04
-PKG_SOURCE_VERSION:=ef0ccb9dd9d4364c0eb9995ee9043cda0de2df48
+PKG_SOURCE_URL:=https://github.com/LuisMitaHL/dhcpoptinj
+PKG_SOURCE_DATE:=2026-06-21
+PKG_SOURCE_VERSION:=da2ce5fee601e77020848d5f7ebd3eec9c8fac91
 
 PKG_MIRROR_HASH:=skip
 
-# PKG_MAINTAINER:=
+PKG_MAINTAINER:=Luis Mita <fake@luismita.com>
 PKG_LICENSE:=GPL-3.0-or-later
 
 include $(INCLUDE_DIR)/package.mk
@@ -40,6 +40,7 @@ endef
 define Package/dhcpoptinj/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/dhcpoptinj $(1)/usr/bin/
+	$(INSTALL_BIN) ./files/dhcpoptinj-enc82.sh $(1)/usr/bin/dhcpoptinj-enc82
 	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_CONF) files/$(PKG_NAME).config $(1)/etc/config/$(PKG_NAME)
 	$(INSTALL_DIR) $(1)/etc/init.d
