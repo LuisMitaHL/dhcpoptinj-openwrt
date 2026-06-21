@@ -1,5 +1,5 @@
 #
-# This is free software, licensed under the GNU General Public License v2.
+# This is free software, licensed under the GNU General Public License v3.
 # See /LICENSE for more information.
 #
 
@@ -9,13 +9,14 @@ PKG_NAME:=dhcpoptinj
 PKG_RELEASE:=3
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/nanosonde/dhcpoptinj.git
+PKG_SOURCE_URL:=https://github.com/nanosonde/dhcpoptinj
 PKG_SOURCE_DATE:=2025-04-04
-PKG_SOURCE_VERSION:=dev
+PKG_SOURCE_VERSION:=ef0ccb9dd9d4364c0eb9995ee9043cda0de2df48
+
 PKG_MIRROR_HASH:=skip
 
 # PKG_MAINTAINER:=
-PKG_LICENSE:=GPL-2.0-or-later
+PKG_LICENSE:=GPL-3.0-or-later
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
