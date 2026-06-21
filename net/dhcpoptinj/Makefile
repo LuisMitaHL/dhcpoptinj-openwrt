@@ -10,11 +10,11 @@ PKG_RELEASE:=3
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/nanosonde/dhcpoptinj.git
-PKG_SOURCE_DATE:=2019-09-28
+PKG_SOURCE_DATE:=2025-04-04
 PKG_SOURCE_VERSION:=dev
 PKG_MIRROR_HASH:=skip
 
-PKG_MAINTAINER:=Nanosonde
+# PKG_MAINTAINER:=
 PKG_LICENSE:=GPL-2.0-or-later
 
 include $(INCLUDE_DIR)/package.mk
