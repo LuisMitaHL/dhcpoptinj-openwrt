@@ -32,26 +32,26 @@ nft_setup_rules() {
 	case "$snoop" in
 		request)
 			nft add rule bridge dhcpoptinj prerouting \
-				$iface_match ip protocol udp udp dport 67 counter queue num "$queue" || {
+				$iface_match ip protocol udp udp dport 67 counter queue num "$queue" bypass || {
 				logger -t dhcpoptinj "failed to add nftables rule for port 67"
 				return 1
 			}
 			;;
 		reply)
 			nft add rule bridge dhcpoptinj prerouting \
-				$iface_match ip protocol udp udp dport 68 counter queue num "$queue" || {
+				$iface_match ip protocol udp udp dport 68 counter queue num "$queue" bypass || {
 				logger -t dhcpoptinj "failed to add nftables rule for port 68"
 				return 1
 			}
 			;;
 		*)
 			nft add rule bridge dhcpoptinj prerouting \
-				$iface_match ip protocol udp udp dport 67 counter queue num "$queue" || {
+				$iface_match ip protocol udp udp dport 67 counter queue num "$queue" bypass || {
 				logger -t dhcpoptinj "failed to add nftables rule for port 67"
 				return 1
 			}
 			nft add rule bridge dhcpoptinj prerouting \
-				$iface_match ip protocol udp udp dport 68 counter queue num "$queue" || {
+				$iface_match ip protocol udp udp dport 68 counter queue num "$queue" bypass || {
 				logger -t dhcpoptinj "failed to add nftables rule for port 68"
 				return 1
 			}
