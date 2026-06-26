@@ -108,6 +108,7 @@ config dhcpoptinj 'main'
     option queue '0'             # Netfilter queue number (must match nftables rule)
     option snoop 'both'          # Packets to intercept: 'request', 'reply', 'both', 'none'
     option interface ''          # Bridge interface to match (e.g. 'br-lan'; empty = all)
+    # list exclude_interface 'eth0'   # Bridge interfaces to exclude (empty = none)
     option debug '0'             # Enable debug output
     option forward_on_fail '0'   # Forward packet if processing fails
     option conflict ''           # Conflict handling: '' (off), 'ignore', or 'remove'
